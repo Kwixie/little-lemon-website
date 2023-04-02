@@ -3,7 +3,7 @@ import { Box, Container, Typography, Paper, Button, Grid } from "@mui/material";
 
 const AboutSection = () => {
   return (
-    <Container sx={{ mb: 4 }}>
+    <Container sx={{ mb: 8, mt: 4 }}>
       <Typography
         variant="h3"
         component="h1"
@@ -32,6 +32,9 @@ const AboutSection = () => {
               bgcolor: "secondary.main",
               color: "grey.800",
               marginTop: 2,
+              "&:hover": {
+                bgcolor: "	hsl(50, 91%, 60%)",
+              },
             }}
           >
             Order

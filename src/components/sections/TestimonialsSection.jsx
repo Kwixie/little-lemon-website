@@ -1,10 +1,18 @@
 import React from "react";
-import { Container, Avatar, Box, Typography, Paper, Grid } from "@mui/material";
+import {
+  Container,
+  Avatar,
+  Box,
+  Typography,
+  Paper,
+  Grid,
+  Divider,
+} from "@mui/material";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
-import Avatar1 from "../../assets/avatar1.png";
-import Avatar2 from "../../assets/avatar2.png";
-import Avatar3 from "../../assets/avatar3.png";
-import Avatar4 from "../../assets/avatar4.png";
+import Avatar5 from "../../assets/avatar5.png";
+import Avatar6 from "../../assets/avatar6.png";
+import Avatar7 from "../../assets/avatar7.png";
+import Avatar8 from "../../assets/avatar8.png";
 import { styled } from "@mui/material/styles";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -24,8 +32,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const TestimonialsSection = () => {
   return (
-    <Container maxWidth={false} sx={{ maxWidth: "1300px" }}>
-      <Grid container spacing={1}>
+    <Container maxWidth={false} sx={{ maxWidth: "1300px", py: 8 }}>
+      <Grid container spacing={1} sx={{ mb: 8 }}>
         <Grid item xs={12} sm={6} md={3}>
           <Item>
             <Box
@@ -38,7 +46,7 @@ const TestimonialsSection = () => {
             >
               <Avatar
                 alt="avatar"
-                src={Avatar1}
+                src={Avatar5}
                 sx={{
                   display: "inline-block",
                   position: "absolute",
@@ -66,7 +74,7 @@ const TestimonialsSection = () => {
             >
               <Avatar
                 alt="avatar"
-                src={Avatar2}
+                src={Avatar6}
                 sx={{
                   display: "inline-block",
                   position: "absolute",
@@ -94,7 +102,7 @@ const TestimonialsSection = () => {
             >
               <Avatar
                 alt="avatar"
-                src={Avatar3}
+                src={Avatar7}
                 sx={{
                   display: "inline-block",
                   position: "absolute",
@@ -122,7 +130,7 @@ const TestimonialsSection = () => {
             >
               <Avatar
                 alt="avatar"
-                src={Avatar4}
+                src={Avatar8}
                 sx={{
                   display: "inline-block",
                   position: "absolute",
@@ -138,6 +146,7 @@ const TestimonialsSection = () => {
           </Item>
         </Grid>
       </Grid>
+      <Divider />
     </Container>
   );
 };

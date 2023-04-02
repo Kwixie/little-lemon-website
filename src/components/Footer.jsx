@@ -1,6 +1,8 @@
 import { styled, Typography } from "@mui/material";
 import { Box, Container } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
+import FooterLogo from "../assets/footer-logo.png";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -25,21 +27,35 @@ const Footer = () => {
     },
   }));
 
-  const FooterLink = styled("span")(({ theme }) => ({
+  const FooterLink = styled("a")(({ theme }) => ({
     fontSize: "16px",
     color: "#7A7A7E",
     fontWeight: "300",
     cursor: "pointer",
+    textDecoration: "none",
     "&:hover": {
       color: "#000",
     },
   }));
 
+  const TypoStyled = styled("span")(({ theme }) => ({
+    fontSize: "16px",
+    color: "#7A7A7E",
+    fontWeight: "300",
+  }));
+
   return (
-    <Box sx={{ py: 10 }}>
+    <Box sx={{ pb: 8 }}>
       <CustomContainer>
         <CustomContainer>
           <Box>
+            <img
+              src={FooterLogo}
+              alt="logo"
+              style={{ width: "70px", marginTop: "1rem" }}
+            />
+          </Box>
+          <Box>
             <Typography
               sx={{
                 fontSize: "20px",
@@ -48,16 +64,16 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Products
+              Navigation
             </Typography>
 
-            <FooterLink>Listing</FooterLink>
+            <FooterLink href="/menu">Menu</FooterLink>
             <br />
-            <FooterLink>Properties</FooterLink>
+            <FooterLink href="/order">Order</FooterLink>
             <br />
-            <FooterLink>Agents</FooterLink>
+            <FooterLink href="/reservation">Reservation</FooterLink>
             <br />
-            <FooterLink>Blog</FooterLink>
+            <FooterLink href="/about">About</FooterLink>
           </Box>
 
           <Box>
@@ -69,16 +85,18 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Resources
+              Contact
             </Typography>
 
-            <FooterLink>Our Homes</FooterLink>
+            <TypoStyled>2395 Maldove Way</TypoStyled>
             <br />
-            <FooterLink>Stories</FooterLink>
+            <TypoStyled>Chicage Illinois</TypoStyled>
             <br />
-            <FooterLink>Video</FooterLink>
+            <TypoStyled>
+              {"("}629{")"}-234-6827
+            </TypoStyled>
             <br />
-            <FooterLink>Free Trial</FooterLink>
+            <TypoStyled>info@littlelemon.com</TypoStyled>
           </Box>
 
           <Box>
@@ -90,44 +108,22 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Company
+              Social
             </Typography>
 
-            <FooterLink>Partnerships</FooterLink>
-            <br />
-            <FooterLink>Terms of use</FooterLink>
-            <br />
-            <FooterLink>Privacy</FooterLink>
-            <br />
-            <FooterLink>Sitemap</FooterLink>
-          </Box>
+            <TypoStyled>Follow us on social media for more updates!</TypoStyled>
 
-          <Box>
-            <Typography
+            <IconBox
               sx={{
-                fontSize: "20px",
-                color: "#1C1C1D",
-                fontWeight: "700",
-                mb: 2,
+                mt: 2,
               }}
             >
-              Get in touch
-            </Typography>
-
-            <Typography
-              sx={{
-                fontSize: "16px",
-                color: "#7A7A7E",
-                fontWeight: "500",
-                mb: 2,
-              }}
-            >
-              You’ll find your next home, in any style you prefer.
-            </Typography>
-
-            <IconBox>
-              <FacebookIcon />
-              <TwitterIcon />
+              <Link href="/menu">
+                <FacebookIcon />
+              </Link>
+              <Link href="/menu">
+                <TwitterIcon />
+              </Link>
             </IconBox>
           </Box>
         </CustomContainer>
