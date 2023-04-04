@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Paper, Button, Grid } from "@mui/material";
+import { Container, Typography, Button, Grid } from "@mui/material";
 
 const AboutSection = () => {
   return (

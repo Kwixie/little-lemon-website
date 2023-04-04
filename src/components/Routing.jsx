@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
-import ConfirmationPage from "./pages/ConfirmationPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import MenuPage from "./pages/MenuPage";
@@ -17,7 +16,6 @@ const Routing = () => {
       <Route path="/reservations" element={<ReservationPage />} />
       <Route path="/order" element={<OrderPage />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/confirmation" element={<ConfirmationPage />} />
     </Routes>
   );
 };

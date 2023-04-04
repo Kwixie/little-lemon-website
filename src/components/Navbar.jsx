@@ -41,7 +41,6 @@ const Navbar = () => {
               display: { xs: "none", md: "flex" },
               justifyContent: "space-around",
               px: 6,
-              // maxWidth: "800px",
             }}
           >
             {pages.map((page) => (
@@ -98,7 +97,12 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" color="primary">
+                  <Typography
+                    textAlign="center"
+                    color="primary"
+                    href={`/${page}`}
+                    component="a"
+                  >
                     {page}
                   </Typography>
                 </MenuItem>

@@ -1,7 +1,12 @@
 import React from "react";
+import DefaultHeader from "../DefaultHeader";
 
 const MenuPage = () => {
-  return <div>Menu page</div>;
+  return (
+    <div>
+      <DefaultHeader />
+    </div>
+  );
 };
 
 export default MenuPage;

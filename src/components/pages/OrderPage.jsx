@@ -1,7 +1,12 @@
 import React from "react";
+import DefaultHeader from "../DefaultHeader";
 
 const OrderPage = () => {
-  return <div>Order Page</div>;
+  return (
+    <div>
+      <DefaultHeader />
+    </div>
+  );
 };
 
 export default OrderPage;

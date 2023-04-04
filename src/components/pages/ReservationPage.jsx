@@ -1,14 +1,24 @@
 import React from "react";
 import ReservationForm from "../sections/ReservationForm";
-import { fetchAPI } from "../../bookingsAPI";
-import { useState } from "react";
+import { Box } from "@mui/material";
+import GreekSallad from "../../assets/greek-sallad.png";
 
 const ReservationPage = () => {
-  const [availableTimes, setAvailableTimes] = useState(null);
-
   return (
     <div>
-      <h1>reservation</h1>
+      <Box sx={{ height: "40vh" }}>
+        <img
+          src={GreekSallad}
+          alt="hero"
+          className="imgHeader"
+          style={{
+            display: "block",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      </Box>
       <ReservationForm />
     </div>
   );

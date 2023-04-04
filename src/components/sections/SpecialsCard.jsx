@@ -24,7 +24,7 @@ const SpecialsCard = ({ dish }) => {
     } else {
       setImgUrl(Mozarella);
     }
-  }, []);
+  }, [id]);
 
   return (
     <Card sx={{ maxWidth: 345, my: 2 }}>
@@ -32,10 +32,10 @@ const SpecialsCard = ({ dish }) => {
         <CardMedia component="img" height="140" image={imgUrl} alt={name} />
         <CardContent>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h6" component="div">
               {name}
             </Typography>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h6" component="div">
               {price}
             </Typography>
           </Box>
@@ -49,5 +49,3 @@ const SpecialsCard = ({ dish }) => {
 };
 
 export default SpecialsCard;
-
-// C:\Users\mlikb\OneDrive\Programming\little-lemon-website\
